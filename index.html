@@ -1,1 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classli — Waitlist</title>
+    <meta name="description" content="Classli — Made for students, by students." />
+    <style>
+      :root { color-scheme: light dark; }
+      body {
+        margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        display: grid; place-items: center; min-height: 100vh;
+        padding: 24px;
+      }
+      .card {
+        width: 100%; max-width: 520px;
+        border-radius: 20px;
+        padding: 28px;
+        border: 1px solid rgba(120,120,120,.25);
+        background: rgba(255,255,255,.04);
+        backdrop-filter: blur(6px);
+      }
+      .icon {
+        width: 64px; height: 64px; border-radius: 16px;
+        display: grid; place-items: center;
+        border: 1px solid rgba(120,120,120,.25);
+        margin-bottom: 16px;
+        overflow: hidden;
+      }
+      h1 { margin: 0 0 8px; font-size: 34px; letter-spacing: -0.5px; }
+      p { margin: 0 0 18px; opacity: .85; line-height: 1.4; }
+      form { display: flex; gap: 10px; margin-top: 14px; }
+      input {
+        flex: 1; padding: 14px 14px; border-radius: 14px;
+        border: 1px solid rgba(120,120,120,.35);
+        background: transparent; color: inherit;
+        outline: none;
+      }
+      button {
+        padding: 14px 16px; border-radius: 14px; border: none;
+        background: #2f6fed; color: white; font-weight: 600;
+        cursor: pointer;
+      }
+      .fine { font-size: 12px; opacity: .65; margin-top: 14px; }
+      .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 16px; }
+      .badge {
+        font-size: 12px; padding: 6px 10px; border-radius: 999px;
+        border: 1px solid rgba(120,120,120,.35);
+        opacity: .85;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <div class="icon">
+        <!-- Optional: replace with your icon image -->
+        <img src="icon.png" alt="Classli icon" style="width:100%;height:100%;object-fit:cover;" />
+      </div>
 
+      <h1>Classli</h1>
+      <p>Made for students, by students. Join the waitlist for early access.</p>
+
+      <!-- Netlify Forms: works automatically when hosted on Netlify -->
+      <form name="waitlist" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="waitlist" />
+        <input name="email" type="email" placeholder="you@school.edu" required />
+        <button type="submit">Join</button>
+      </form>
+
+      <div class="row">
+        <span class="badge">iPhone</span>
+        <span class="badge">iPad</span>
+        <span class="badge">Mac (Apple Silicon)</span>
+      </div>
+
+      <p class="fine">
+        No spam. Just launch updates and invite waves.
+      </p>
+    </main>
+  </body>
+</html>
